@@ -1,11 +1,29 @@
+[note for myself 2022-03-18]
+
+I added some docker configs to run the koans on a macbook with M1 chip.
+At the time being the stable version of dotnet is 6, but this koan seems to require 3.1 to run.
+
+**to build the image (first time only)**
+
+`docker build -t dotnetkoan .`
+
+**to run the koans**
+
+`docker run --rm -v $(pwd)/Koans:/dotnet-koans/Koans -it dotnetkoan`
+
+Original repo README content below:
+
+<hr>
+
 <p align="center">
 <img width="300px" src="https://raw.githubusercontent.com/NotMyself/DotNetCoreKoans/master/static/img/dot-net-core-koans-logo.svg" />
 </p>
 
+# .Net Core Koans
 
-# .Net Core Koans 
 [![Build status](https://ci.appveyor.com/api/projects/status/j0ykx336513hmnep/branch/master?svg=true)](https://ci.appveyor.com/project/NotMyself/dotnetcorekoans/branch/master)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 The .NET Core Koans walk you along the path to enlightenment in order to learn C# on .NET Core. The goal is to learn C# syntax, structure and some common functions and libraries available on the .NET Core platform. .NET Core is a cross platform environment that runs happily on Windows, OS X and Linux. It is super simple to get started learning.
@@ -112,6 +130,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
