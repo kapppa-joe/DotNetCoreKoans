@@ -20,7 +20,9 @@ namespace DotNetCoreKoans.Koans
         {
             Mindfulness,
             SilentIllumination,
-            Contemplation
+            Contemplation,
+
+            Observation
         }
 
         enum LogLevel
@@ -56,7 +58,7 @@ namespace DotNetCoreKoans.Koans
             enums are first class types in the C# language. The type of the
             variable 'mindfulness' will be the enum itself.
             */
-            Assert.Equal(typeof(FillMeIn), mindfulness.GetType());
+            Assert.Equal(typeof(MeditationForms), mindfulness.GetType());
 
             /*
             Adding new members to an enum is straight-forward and as you'd expect.
@@ -77,7 +79,7 @@ namespace DotNetCoreKoans.Koans
             and increase by one.
             */
             var quietForm = (MeditationForms)1;
-            Assert.Equal(FILL_ME_IN, quietForm);
+            Assert.Equal(MeditationForms.SilentIllumination, quietForm);
 
             /*
             Why would casting integers to enums be valuable? You may want to
@@ -99,7 +101,7 @@ namespace DotNetCoreKoans.Koans
             and incrementing by one. Perhaps you want them incrementing by 100.
             */
             var logLevel = LogLevel.Verbose;
-            Assert.Equal(FILL_ME_IN, (int)logLevel);
+            Assert.Equal(300, (int)logLevel);
         }
 
         [Step(4)]
@@ -116,7 +118,7 @@ namespace DotNetCoreKoans.Koans
             We're missing Friday!
             */
 
-            var workWeek = DayOfTheWeek.Monday | DayOfTheWeek.Tuesday | DayOfTheWeek.Wednesday | DayOfTheWeek.Thursday | FILL_ME_IN;
+            var workWeek = DayOfTheWeek.Monday | DayOfTheWeek.Tuesday | DayOfTheWeek.Wednesday | DayOfTheWeek.Thursday | DayOfTheWeek.Friday;
             Assert.True(workWeek.HasFlag(DayOfTheWeek.Friday)); // Assuming you work Fridays :)
         }
 
