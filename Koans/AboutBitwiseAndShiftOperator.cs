@@ -148,7 +148,7 @@ namespace DotNetCoreKoans.Koans
             }
 
 
-            Assert.Equal(Add(a, b), 19);
+            Assert.Equal(19, Add(a, b));
         }
     }
 }
